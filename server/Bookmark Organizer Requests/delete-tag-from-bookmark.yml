@@ -1,0 +1,15 @@
+info:
+  name: delete-tag-from-bookmark
+  type: http
+  seq: 18
+
+http:
+  method: DELETE
+  url: http://localhost:3001/users/1/bookmarks/101/tags/201
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

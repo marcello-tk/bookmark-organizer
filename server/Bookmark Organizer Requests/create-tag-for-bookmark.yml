@@ -1,0 +1,15 @@
+info:
+  name: create-tag-for-bookmark
+  type: http
+  seq: 17
+
+http:
+  method: POST
+  url: http://localhost:3001/users/1/bookmarks/101/tags
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,15 @@
+info:
+  name: get-tags-for-bookmark
+  type: http
+  seq: 16
+
+http:
+  method: GET
+  url: http://localhost:3001/users/1/bookmarks/101/tags
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

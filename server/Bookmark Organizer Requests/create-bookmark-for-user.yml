@@ -1,0 +1,15 @@
+info:
+  name: create-bookmark-for-user
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: http://localhost:3001/users/1/bookmarks
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
