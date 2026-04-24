@@ -1,7 +1,7 @@
 {
-  "name": "link-organizer-server",
+  "name": "bookmark-organizer-server",
   "version": "0.0.1",
-  "description": "Server for the Link Organizer webapp.",
+  "description": "Server for the Bookmark Organizer webapp.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
