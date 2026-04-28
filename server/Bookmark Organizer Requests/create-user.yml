@@ -6,6 +6,13 @@ info:
 http:
   method: POST
   url: http://localhost:3001/users
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Joe",
+        "email": "joe@mail.com"
+      }
   auth: inherit
 
 settings:
@@ -13,3 +20,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+​
