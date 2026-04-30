@@ -12,7 +12,7 @@ const CreateUserSchema = zod.object({
 });
 
 const UpdateUserSchema = zod.object({
-  name: zod.string().optional(),
+  name: zod.string().min(1, "Name is required").max(100, "Name must be less than 100 characters").optional(),
   email: zod.string().email().optional(),
 });
 

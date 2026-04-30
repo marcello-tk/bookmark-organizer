@@ -6,6 +6,12 @@ info:
 http:
   method: PUT
   url: http://localhost:3001/users/1
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Anna"
+      }
   auth: inherit
 
 settings:
