@@ -5,7 +5,14 @@ info:
 
 http:
   method: POST
-  url: http://localhost:3001/users/1/bookmarks/101/tags
+  url: http://localhost:3001/users/1/bookmarks/1/tags
+  body:
+    type: json
+    data: |-
+      {
+        "userId": "1",
+        "name": "economy"
+      }
   auth: inherit
 
 settings:
@@ -13,3 +20,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+​

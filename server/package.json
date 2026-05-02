@@ -4,7 +4,7 @@
   "description": "Server for the Bookmark Organizer webapp.",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node --env-file=.env app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,6 +12,7 @@
   "license": "MIT",
   "type": "commonjs",
   "dependencies": {
+    "cors": "^2.8.6",
     "express": "^5.2.1",
     "zod": "^4.3.6"
   }

@@ -1,26 +1,25 @@
 const zod = require("zod");
 
-const UserSchema = zod.object({
-  id: zod.string().uuid(),
-  name: zod.string(),
-  email: zod.string().email(),
-});
+// Reusable field definitions
+const id = zod.string().uuid();
+const name = zod
+  .string()
+  .min(1, "Name is required")
+  .max(100, "Name must be less than 100 characters");
+const email = zod.string().email();
 
-const CreateUserSchema = zod.object({
-  name: zod.string().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
-  email: zod.string().email(),
-});
+// Schemas
+const UserSchema = zod.object({ id, name, email });
+
+const CreateUserSchema = zod.object({ name, email });
 
 const UpdateUserSchema = zod.object({
-  name: zod.string().min(1, "Name is required").max(100, "Name must be less than 100 characters").optional(),
-  email: zod.string().email().optional(),
+  name: name.optional(),
+  email: email.optional(),
 });
-
-const zodError = zod.ZodError;
 
 module.exports = {
   UserSchema,
   CreateUserSchema,
   UpdateUserSchema,
-  zodError,
 };

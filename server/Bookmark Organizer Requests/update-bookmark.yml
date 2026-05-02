@@ -5,7 +5,16 @@ info:
 
 http:
   method: PUT
-  url: http://localhost:3001/users/1/bookmarks/101
+  url: http://localhost:3001/users/1/bookmarks/1
+  body:
+    type: json
+    data: |-
+      {
+        "title": "Mody Dick",
+        "url": "https:\\dicks-at-moby.com",
+        "userId": "1",
+        "description": "hello"
+      }
   auth: inherit
 
 settings:
@@ -13,3 +22,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+​
